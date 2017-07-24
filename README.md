@@ -2,6 +2,15 @@
 
 ODCE is a project to list cryptocurrency exchanges in a .json file that has a particular structure that teaches how to interpret the response for each exchange and find the price information for high, low, last, etc.
 
+# Java interpreter
+
+For a Java reader for this, see https://github.com/lucaszanella/OCDE_Java
+
+#Javascript interpreter
+
+Javascript version coming soon
+
+
 # How to add new exchanges and cryptocurrencies
 
 There are 3 types of json responses you'll encounter while digging through the API of an Exchange. They are: ```VARIABLES_IN_URL_SAME_STRUCTUE```, which is when you put the currency you want in the URL and receive a json with an expected structure that is equal for all currencies, ```VARIABLES_IN_URL```, which is when the variables still go in the URL but for each coin the structure is different (believe me, there was an exchange that did it), and the third type is ```VARIABLES_IN_JSON_SAME_URL```, when there is just one URL and you get all coins at once. 
