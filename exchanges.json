@@ -1,0 +1,127 @@
+{
+  "foxbit": {
+    "name": "Foxbit",
+    "countries": ["BR"],
+    "url": "foxbit.com.br",
+    "type": "A",
+    "structure": ["high", "low", "last", "buy", "sell"],
+    "api": {
+      "bitcoin/real": "api.blinktrade.com/api/v1/BRL/ticker?crypto_currency=BTC"
+    }
+  },
+  "mercado_bitcoin": {
+    "name": "Mercado Bitcoin",
+    "countries": ["BR"],
+    "url": "mercadobitcoin.com.br",
+    "type": "A",
+    "structure": ["ticker.high", "ticker.low", "ticker.last", "ticker.buy", "ticker.sell"],
+    "api": {
+      "bitcoin/real": "mercadobitcoin.net/api/ticker",
+      "litecoin/real": "mercadobitcoin.net/api/ticker_litecoin"
+    }
+  },
+  "bitfinex": {
+    "name": "Bitfinex",
+    "countries": ["US"],
+    "url": "bitfinex.com",
+    "type": "A",
+    "structure": ["8", "9", "6"],
+    "api": {
+      "bitcoin/dollar": "api.bitfinex.com/v2/ticker/tBTCUSD",
+      "litecoin/dollar": "api.bitfinex.com/v2/ticker/tLTCUSD",
+      "ethereum/dollar": "api.bitfinex.com/v2/ticker/tETHUSD",
+      "iota/dollar":"api.bitfinex.com/v2/ticker/tIOTUSD",
+      "ripple/dollar":"api.bitfinex.com/v2/ticker/tXRPUSD",
+      "ethereum_classic/dollar":"api.bitfinex.com/v2/ticker/tETCUSD",
+      "dash/dollar":"api.bitfinex.com/v2/ticker/tDSHUSD",
+      "monero/dollar":"api.bitfinex.com/v2/ticker/tXMRUSD",
+      "zcash/dollar":"api.bitfinex.com/v2/ticker/tZECUSD"
+    }
+  },
+  "coinbase": {
+    "name": "Coinbase",
+    "countries": ["US"],
+    "url": "coinbase.com",
+    "type": "A",
+    "structure": ["", "", "data.high"],
+    "api": {
+      "bitcoin/dollar": "api.coinbase.com/v2/prices/spot?currency=USD"
+    }
+  },
+  "poloniex": {
+    "name": "Poloniex",
+    "countries": ["US"],
+    "url": "poloniex.com",
+    "type": "C",
+    "endpoint": "poloniex.com/public?command=returnTicker",
+    "api": {
+      "bitcoin/dollar": ["USDT_BTC.highestBid", "USDT_BTC.lowestAsk", "USDT_BTC.last"],
+      "ethereum/dollar": ["USDT_ETH.highestBid", "USDT_ETH.lowestAsk", "USDT_ETH.last"],
+      "ethereum_classic/dollar": ["USDT_ETC.highestBid", "USDT_ETC.lowestAsk", "USDT_ETC.last"],
+      "zcash/dollar": ["USDT_ZEC.highestBid", "USDT_ZEC.lowestAsk", "USDT_ZEC.last"],
+      "litecoin/dollar": ["USDT_LTC.highestBid", "USDT_LTC.lowestAsk", "USDT_LTC.last"],
+      "dash/dollar": ["USDT_DASH.highestBid", "USDT_DASH.lowestAsk", "USDT_DASH.last"],
+      "monero/dollar": ["USDT_XMR.highestBid", "USDT_XMR.lowestAsk", "USDT_XMR.last"]
+    }
+  },
+  "kraken": {
+    "name": "Kraken",
+    "countries": ["US"],
+    "url": "kraken.com",
+    "type": "B",
+"api": {
+      "bitcoin/euro": ["api.kraken.com/0/public/Ticker?pair=BTCEUR",["result.XXBTZEUR.h.0","result.XXBTZEUR.l.0","result.XXBTZEUR.c.0"]],
+      "bitcoin/dollar": ["api.kraken.com/0/public/Ticker?pair=XBTUSD",["result.XXBTZUSD.h.0","result.XXBTZUSD.l.0","result.XXBTZUSD.c.0"]],
+      "dash/euro": ["api.kraken.com/0/public/Ticker?pair=DASHEUR",["result.DASHEUR.h.0","result.DASHEUR.l.0","result.DASHEUR.c.0"]],
+      "dash/dollar": ["api.kraken.com/0/public/Ticker?pair=DASHUSD",["result.DASHUSD.h.0","result.DASHUSD.l.0","result.DASHUSD.c.0"]],
+      "dash/bitcoin": ["api.kraken.com/0/public/Ticker?pair=DASHXBT",["result.DASHXBT.h.0","result.DASHXBT.l.0","result.DASHXBT.c.0"]],
+      "eos/ethereum": ["api.kraken.com/0/public/Ticker?pair=EOSETH",["result.EOSETH.h.0","result.EOSETH.l.0","result.EOSETH.c.0"]],
+      "eos/bitcoin": ["api.kraken.com/0/public/Ticker?pair=EOSXBT",["result.EOSXBT.h.0","result.EOSXBT.l.0","result.EOSXBT.c.0"]],
+      "eos/euro": ["api.kraken.com/0/public/Ticker?pair=EOSEUR",["result.EOSEUR.h.0","result.EOSEUR.l.0","result.EOSEUR.c.0"]],
+      "eos/dollar": ["api.kraken.com/0/public/Ticker?pair=EOSUSD",["result.EOSUSD.h.0","result.EOSUSD.l.0","result.EOSUSD.c.0"]],
+      "gnosis/ethereum": ["api.kraken.com/0/public/Ticker?pair=GNOETH",["result.GNOETH.h.0","result.GNOETH.l.0","result.GNOETH.c.0"]],
+      "gnosis/bitcoin": ["api.kraken.com/0/public/Ticker?pair=GNOXBT",["result.GNOXBT.h.0","result.GNOXBT.l.0","result.GNOXBT.c.0"]],
+      "gnosis/euro": ["api.kraken.com/0/public/Ticker?pair=GNOEUR",["result.GNOEUR.h.0","result.GNOEUR.l.0","result.GNOEUR.c.0"]],
+      "gnosis/dollar": ["api.kraken.com/0/public/Ticker?pair=GNOUSD",["result.GNOUSD.h.0","result.GNOUSD.l.0","result.GNOUSD.c.0"]],
+      "ethereum_classic/ethereum": ["api.kraken.com/0/public/Ticker?pair=ETCETH",["result.XETCXETH.h.0","result.XETCXETH.l.0","result.XETCXETH.c.0"]],
+      "ethereum_classic/bitcoin": ["api.kraken.com/0/public/Ticker?pair=ETCXBT",["result.XETCXXBT.h.0","result.XETCXXBT.l.0","result.XETCXXBT.c.0"]],
+      "ethereum_classic/euro": ["api.kraken.com/0/public/Ticker?pair=ETCEUR",["result.XETCZEUR.h.0","result.XETCZEUR.l.0","result.XETCZEUR.c.0"]],
+      "ethereum_classic/dollar": ["api.kraken.com/0/public/Ticker?pair=ETCUSD",["result.XETCZUSD.h.0","result.XETCZUSD.l.0","result.XETCZUSD.c.0"]],
+      "ethereum/bitcoin": ["api.kraken.com/0/public/Ticker?pair=ETHXBT",["result.XETHXXBT.h.0","result.XETHXXBT.l.0","result.XETHXXBT.c.0"]],
+      "ethereum/canadian_dollar": ["api.kraken.com/0/public/Ticker?pair=ETHCAD",["result.XETHZCAD.h.0","result.XETHZCAD.l.0","result.XETHZCAD.c.0"]],
+      "ethereum/euro": ["api.kraken.com/0/public/Ticker?pair=ETHEUR",["result.XETHZEUR.h.0","result.XETHZEUR.l.0","result.XETHZEUR.c.0"]],
+      "ethereum/pound_sterling": ["api.kraken.com/0/public/Ticker?pair=ETHGBP",["result.XETHZGBP.h.0","result.XETHZGBP.l.0","result.XETHZGBP.c.0"]],
+      "ethereum/yen": ["api.kraken.com/0/public/Ticker?pair=ETHJPY",["result.XETHZJPY.h.0","result.XETHZJPY.l.0","result.XETHZJPY.c.0"]],
+      "ethereum/dollar": ["api.kraken.com/0/public/Ticker?pair=ETHUSD",["result.XETHZUSD.h.0","result.XETHZUSD.l.0","result.XETHZUSD.c.0"]],
+      "iconomi/ethereum": ["api.kraken.com/0/public/Ticker?pair=ICNETH",["result.XICNXETH.h.0","result.XICNXETH.l.0","result.XICNXETH.c.0"]],
+      "iconomi/bitcoin": ["api.kraken.com/0/public/Ticker?pair=ICNXBT",["result.XICNXXBT.h.0","result.XICNXXBT.l.0","result.XICNXXBT.c.0"]],
+      "litecoin/bitcoin": ["api.kraken.com/0/public/Ticker?pair=LTCXBT",["result.XLTCXXBT.h.0","result.XLTCXXBT.l.0","result.XLTCXXBT.c.0"]],
+      "litecoin/euro": ["api.kraken.com/0/public/Ticker?pair=LTCEUR",["result.XLTCZEUR.h.0","result.XLTCZEUR.l.0","result.XLTCZEUR.c.0"]],
+      "litecoin/dollar": ["api.kraken.com/0/public/Ticker?pair=LTCUSD",["result.XLTCZUSD.h.0","result.XLTCZUSD.l.0","result.XLTCZUSD.c.0"]],
+      "melon/ethereum": ["api.kraken.com/0/public/Ticker?pair=MLNETH",["result.XMLNXETH.h.0","result.XMLNXETH.l.0","result.XMLNXETH.c.0"]],
+      "melon/bitcoin": ["api.kraken.com/0/public/Ticker?pair=MLNXBT",["result.XMLNXXBT.h.0","result.XMLNXXBT.l.0","result.XMLNXXBT.c.0"]],
+      "augur/ethereum": ["api.kraken.com/0/public/Ticker?pair=REPETH",["result.XREPXETH.h.0","result.XREPXETH.l.0","result.XREPXETH.c.0"]],
+      "augur/bitcoin": ["api.kraken.com/0/public/Ticker?pair=REPXBT",["result.XREPXXBT.h.0","result.XREPXXBT.l.0","result.XREPXXBT.c.0"]],
+      "augur/euro": ["api.kraken.com/0/public/Ticker?pair=REPEUR",["result.XREPZEUR.h.0","result.XREPZEUR.l.0","result.XREPZEUR.c.0"]],
+      "augur/dollar": ["api.kraken.com/0/public/Ticker?pair=REPUSD",["result.XREPZUSD.h.0","result.XREPZUSD.l.0","result.XREPZUSD.c.0"]],
+      "bitcoin/canadian_dollar": ["api.kraken.com/0/public/Ticker?pair=XBTCAD",["result.XXBTZCAD.h.0","result.XXBTZCAD.l.0","result.XXBTZCAD.c.0"]],
+      "bitcoin/pound_sterling": ["api.kraken.com/0/public/Ticker?pair=XBTGBP",["result.XXBTZGBP.h.0","result.XXBTZGBP.l.0","result.XXBTZGBP.c.0"]],
+      "bitcoin/yen": ["api.kraken.com/0/public/Ticker?pair=XBTJPY",["result.XXBTZJPY.h.0","result.XXBTZJPY.l.0","result.XXBTZJPY.c.0"]],
+      "dogecoin/bitcoin": ["api.kraken.com/0/public/Ticker?pair=XDGXBT",["result.XXDGXXBT.h.0","result.XXDGXXBT.l.0","result.XXDGXXBT.c.0"]],
+      "stellar_lumens/bitcoin": ["api.kraken.com/0/public/Ticker?pair=XLMXBT",["result.XXLMXXBT.h.0","result.XXLMXXBT.l.0","result.XXLMXXBT.c.0"]],
+      "stellar_lumens/euro": ["api.kraken.com/0/public/Ticker?pair=XLMEUR",["result.XXLMZEUR.h.0","result.XXLMZEUR.l.0","result.XXLMZEUR.c.0"]],
+      "stellar_lumens/dollar": ["api.kraken.com/0/public/Ticker?pair=XLMUSD",["result.XXLMZUSD.h.0","result.XXLMZUSD.l.0","result.XXLMZUSD.c.0"]],
+      "monero/bitcoin": ["api.kraken.com/0/public/Ticker?pair=XMRXBT",["result.XXMRXXBT.h.0","result.XXMRXXBT.l.0","result.XXMRXXBT.c.0"]],
+      "monero/euro": ["api.kraken.com/0/public/Ticker?pair=XMREUR",["result.XXMRZEUR.h.0","result.XXMRZEUR.l.0","result.XXMRZEUR.c.0"]],
+      "monero/dollar": ["api.kraken.com/0/public/Ticker?pair=XMRUSD",["result.XXMRZUSD.h.0","result.XXMRZUSD.l.0","result.XXMRZUSD.c.0"]],
+      "ripple/bitcoin": ["api.kraken.com/0/public/Ticker?pair=XRPXBT",["result.XXRBXXBT.h.0","result.XXRBXXBT.l.0","result.XXRBXXBT.c.0"]],
+      "ripple/canadian_dollar": ["api.kraken.com/0/public/Ticker?pair=XRPCAD",["result.XXRBZCAD.h.0","result.XXRBZCAD.l.0","result.XXRBZCAD.c.0"]],
+      "ripple/euro": ["api.kraken.com/0/public/Ticker?pair=XRPEUR",["result.XXRPZEUR.h.0","result.XXRPZEUR.l.0","result.XXRPZEUR.c.0"]],
+      "ripple/yen": ["api.kraken.com/0/public/Ticker?pair=XRPJPY",["result.XXRPZJPY.h.0","result.XXRPZJPY.l.0","result.XXRPZJPY.c.0"]],
+      "ripple/dollar": ["api.kraken.com/0/public/Ticker?pair=XRPUSD",["result.XXRPZUSD.h.0","result.XXRPZUSD.l.0","result.XXRPZUSD.c.0"]],
+      "zcash/bitcoin": ["api.kraken.com/0/public/Ticker?pair=ZECXBT",["result.XZECXXBT.h.0","result.XZECXXBT.l.0","result.XZECXXBT.c.0"]],
+      "zcash/euro": ["api.kraken.com/0/public/Ticker?pair=ZECEUR",["result.XZECZEUR.h.0","result.XZECZEUR.l.0","result.XZECZEUR.c.0"]],
+      "zcash/dollar": ["api.kraken.com/0/public/Ticker?pair=ZECUSD",["result.XZECZUSD.h.0","result.XZECZUSD.l.0","result.XZECZUSD.c.0"]]
+    }
+  }
+}
